@@ -1,0 +1,373 @@
+// -------------------------------------
+// Agency Template: LESS > Widgets
+// -------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  INCLUDES
+//  --------
+
+//  #Widget Spacing
+
+//  #Forms (General)
+//  #Contact Form
+//  #Sign Up Form
+
+//  #Navigation
+//  #Feature
+//  #Gallery
+//  #Slideshow
+
+//  #Profile
+
+//  #Twitter
+//  #Social List
+//  #Yelp Review
+
+
+//  IN FILE
+//  --------
+
+//  #Logo & Company Name
+//  #Company Name
+//  #Buttons
+//  #Dropbox
+//  #Click to Call
+//  #Images
+//  #Divider (Keyline)
+
+
+@import "@{templateLocal}/less/widgets/forms.less";
+@import "@{templateLocal}/less/widgets/contact-form.less";
+@import "@{templateLocal}/less/widgets/signupform.less";
+
+@import "@{templateLocal}/less/navigation.less";
+@import "@{templateLocal}/less/widgets/feature.less";
+@import "@{templateLocal}/less/widgets/gallery.less";
+@import "@{templateLocal}/less/widgets/slideshow.less";
+
+@import "@{templateLocal}/less/widgets/profile.less";
+
+@import "@{templateLocal}/less/widgets/twitter.less";
+@import "@{templateLocal}/less/widgets/social-list.less";
+@import "@{templateLocal}/less/widgets/yelp-review.less";
+
+
+
+
+
+// -----------------------------
+// #Logo / Company Name
+// -----------------------------
+
+// Logo and Company name container
+.widget-profile-header {
+    .flex-display;
+    .align-items(center);
+    @media @mobile {
+        max-width: 86%;
+    }
+}
+
+.page--default {
+    .widget-profile-header {
+        @media @mobile {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.logo {
+    margin: 10px 10px 10px 0;
+    @media @bp-global-small {
+        margin: 0 10px 10px 0;
+    }
+    @media @mobile {
+        margin: 0;
+    }
+}
+
+.logo__logo-image {
+    @media @mobile {
+        transform:scale(0.8);
+    }
+}
+
+// Logo / Company Name Move List Options In editor
+[data-widget-type="logo"] ul.widget__list.list--options,
+[data-widget-type="companyname"] ul.widget__list.list--options  {
+    top: 40px !important;
+}
+
+
+
+
+// -----------------------------
+// #Company Name
+// -----------------------------
+
+
+.companyname {
+    font-size: 0;
+    line-height: 0;
+}
+
+.company-link {
+    margin: 0;
+    color: @color__companyname--text;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+        text-decoration: none;
+    }
+    @media @bp-global-medium, @bp-global-small {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__companyname--font-size, 0.8);
+        line-height: bkscale(@font__companyname--line-height, 0.8);
+    }
+}
+
+
+
+
+// -----------------------------
+// #Buttons
+// -----------------------------
+
+
+.button, 
+.widget__profile.social-link {
+     cursor: pointer;
+    clear: both;
+    padding: 14px 26px;
+    display: inline-block;
+    transition: all 0.8s;
+    cursor: pointer;
+    color: @color__button--text;
+    border: 2px solid @color__button--border;
+    background-color: transparent;
+    font-style: italic;
+
+    &:hover {
+        box-shadow:300px 0 0 0 @color__button--background--hover inset;
+        color: @color__button--text--hover;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+
+}
+
+.widget__buttonwidget,
+.widget__tweet,
+.widget__dropbox,
+.widget__clicktocall {
+    margin-bottom: 20px;
+}
+
+.button:hover:before{transform: scaleX(1);}
+
+
+// #Dropbox
+// ------------------------------
+
+.dropbox__button,
+.dropbox__label {
+    vertical-align: top;
+}
+
+.dropbox__button {
+    margin-right: 0; // LESS Framework Reset
+}
+
+
+// Label
+.dropbox__label {
+    display: inline-block;
+    background-color: @color__button--background;
+    line-height: @font__button--line-height;
+    color: @color__button--text;
+    padding: 0 1em;
+    font-size: 14px;
+
+    @media @mobile {
+        font-size:  bkscale(@font__button--font-size, 0.88);
+    }
+}
+
+// #Click to Call
+// ------------------------------
+
+
+.widget__clicktocall {
+
+    .phone-number-link {
+        .button;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Images
+// ------------------------------
+
+
+// Image Figure
+.imagewidget__figure {
+    margin: 0;
+}
+
+
+// Image Alignment
+.imagewidget__caption,
+.imagewidget {
+    text-align: center;
+}
+
+
+// Image Caption
+.imagewidget__caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: fade(@color__image-caption--background, 50%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 10px 25px 15px;
+    }
+
+    @media @bp-global-small {
+        padding: 5px 20px 5px;
+    }
+}
+
+
+// Image Title
+.imagewidget .image-title:after {
+    margin: 0 auto;
+}
+
+
+
+
+// Image Title & Description
+// ------------------------------
+
+.responsiveslideshow__image-title,
+.responsiveslideshow__image-description,
+.imagewidget__image-title,
+.imagewidget__image-description {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Image Title
+.responsiveslideshow__image-title,
+.imagewidget__image-title {
+    margin-bottom: 10px;
+    font-family: @font__h4--font-family;
+    font-size: @font__h4--font-size;
+    font-weight: @font__h4--font-weight;
+    line-height: @font__h4--line-height;
+    letter-spacing: @font__h4--letter-spacing;
+    color: @color__feature-strapline--text;
+}
+
+
+// Image Description
+.responsiveslideshow__image-description,
+.imagewidget__image-description,
+.gallery__image-description {
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: 20px;
+    letter-spacing: @font__p--letter-spacing;
+    color: @color__feature-strapline--text;
+
+    @media @bp-global-small {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    @media @mobile {
+        font-size: 11px;
+        line-height: 18px;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Divider (Keyline)
+// -----------------------------
+
+
+.widget__line {
+    line-height: 0;
+}
+
+hr.rule {
+    height: 3px;
+    background-color: darken(@color__container--background, 5%);
+}
+
+
+
+
+// -----------------------------
+// #Responsive Columns
+// -----------------------------
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+        
+        .responsiveslideshow__image-title,
+        .responsiveslideshow__image-description {
+            display: none;
+        }
+
+    }
+
+}

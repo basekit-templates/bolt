@@ -1,0 +1,528 @@
+// -------------------------------------
+// Agency Template: LESS > Theme
+// -------------------------------------
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Global Breakpoints
+//  #Site Styles
+//  #Page Styles
+//  #Page Default
+//  #Header
+//  #Footer
+
+
+
+
+// ------------------------------
+// #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
+
+@bp-1300px:   ~"only screen and (max-width: 1300px)";
+@bp-global-large: 	~"only screen and (min-width: 1400px)";
+@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width: 478px)";
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+.container {
+    width: 100%;
+}
+
+.main-content {
+    z-index: 2;
+    position: relative;
+    -webkit-box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+    -moz-box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+    box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+}
+
+.template-title {
+    text-align: center;
+    margin-bottom: 80px;
+    @media @bp-global-small {
+         margin-top: 50px;
+    }
+    @media @mobile {
+        margin-bottom: 60px;
+    }
+    h1 {
+        display: inline;
+        max-width: 140px;
+        padding-bottom: 10px;
+        background: linear-gradient(@color-swatch3,@color-swatch3), linear-gradient(@color-swatch3,@color-swatch3);
+        background-size: 0, 20px 10px;
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        text-align: center;
+        color: @color-swatch2;
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
+        @media @mobile {
+            font-size: bkscale(@font__h1--font-size, 0.6);
+            line-height: bkscale(@font__h1--line-height, 0.5);
+            background-size: 0, 20px 6px;
+        }
+    }
+}
+
+
+.main-zone {
+    padding: 2% 3%;
+    background-color: @color__body--background;
+    @media @bp-global-small {
+        padding: 5% 4% 0;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Page Default
+// ------------------------------
+
+.page--default {
+    .template-header {
+        background-color: fade(@color__feature-content--background 90%);
+        position: relative;
+        padding: 30px 10% 60px;
+        z-index: 0;
+        z-index: 99;
+        @media @bp-global-small {
+            padding: 20px 20px 50px;
+        }
+        .flex-item:first-child {
+            .flex-display(@display: flex);
+            .align-items(@align: center);
+
+            @media @bp-global-small {
+                width: 100%;
+            }
+        }
+        .flex-item {
+            @media @bp-global-small {
+                &:last-child {
+                    display: block!important;
+                }
+            }
+            @media @mobile {
+                &:last-child {
+                    text-align: center;
+                }
+            }
+        }
+        .profile {
+            .button {
+                top: 0;
+                @media @bp-global-small {
+                    line-height: 40px;
+                }
+                @media @mobile {
+                    line-height: 42px;
+                }
+            }
+            .input {
+                color: @color__container--background;
+            }
+        }
+        .company-link {
+            color: @font-swatch10-color;
+        }
+        .container {
+            @media @bp-global-small {
+                padding: 0;
+            }
+        }
+        .widget__logo {
+            margin: 10px!important;
+        }
+    }
+    .navigation-list .navigation-list--children {
+        background-color: @color__feature-content--background;
+    }
+    .homepage-nav {
+        z-index: 3;
+        @media @bp-1300px {
+            margin: -123px auto 0
+        }
+        @media @mobile {
+            padding: 0;
+        }
+    }
+    .main-content {
+        margin-top: 80px;
+        top: 0;
+        .container {
+            padding: 2% 0;
+            background-color: @color__container--background;
+        }
+        @media @bp-global-small {
+            margin-top: 40px;
+        }
+    }
+    .template-title {
+        @media @bp-global-small {
+            margin-top: 20px;
+        }
+        @media @mobile {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+[data-widget-type="feature"] + .template-header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+}
+
+.template-header {
+    background-color: @color__header--background;
+    position: relative;
+    z-index: 12;
+    max-width: 100%;
+    padding: 20px 3%;
+    width: 100%;
+
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
+    @media @bp-1300px { 
+        padding: 20px 40px;
+    }
+    @media @bp-global-small {
+        border: 0;
+        padding: 20px 4%;
+    }
+    @media @mobile {
+        order: 1;
+        padding: 10px 2%;
+    }
+
+    // Container
+	.container {
+		.flex-display;
+		.justify-content(space-between);
+        .align-items(center);
+
+        @media @bp-global-small {
+            display: block;
+        }
+	}
+
+    // Flex Item
+    .flex-item {
+        .flex(1 1 auto);
+
+        &:first-child {
+            min-width: 200px;
+        }
+        &:last-child {
+
+        }
+        @media @bp-global-small {
+            background-color: transparent;
+            border: 0;
+            display: inline-block;
+
+            &:first-child,
+            &:last-child {
+
+            }
+        }
+    }
+}
+
+
+// Hiding Feature Styles
+// ----------------------------------------
+
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .profile .button {
+    top: 0px;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
+    background-color: @color__feature-content--background;
+    position: relative;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
+    height: 100%;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    background-color: @color__feature-content--background;
+    position: relative;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .main-content {
+    top: -55px;
+}
+
+[data-widget-type="feature"]+ .template-header + .container-slant {
+    padding-top: 5%;
+    top: -75px;
+
+    .home-flex:before {
+        display: block;
+    }
+
+    .home-flex-item:first-child {
+        @media @mobile {
+            padding-top: 70px;
+        }
+    }
+}
+
+[data-widget-type="feature"].bk-tpl-hidden + .template-header + .container-slant,
+.template-header + .container-slant {
+    padding-top: 2%;
+    top: 0;
+
+    .home-flex:before {
+        display: none;
+    }
+
+    .home-flex-item:first-child {
+        @media @mobile {
+            padding-top: 25px;
+        }
+    }
+}
+
+
+// Header: Additional
+// ------------------------------
+
+// For default page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
+    z-index: inherit;
+    width: 100%;
+    background-color: @color__header--background;
+    min-height: auto;
+    z-index: 99;
+
+    .main-content {
+        top: -35px;
+    }
+
+    // Profile Widget
+    .profile {
+
+        p, h2, h3,
+        .phone-number-link,
+        .company-link,
+        .social-link:before,
+        .emailaddress__email,
+        .button {
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .tweet-content a {
+            color: white;
+        }
+
+         // Email
+        .emailaddress__email {
+            @media @bp-global-small {
+                color: transparent;
+
+                &:before {
+                    color: @color__h2--text;
+                }
+            }
+        }
+
+        // Form
+        .input {
+            color: @color__h2--text;
+            border-color: darken(@color__container--background, 10%);
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+            border-right: 1px solid darken(@color__container--background, 10%);
+        }
+
+    }
+
+    // Navigation Toggle Button
+    .navigation-toggle {
+        background-color: @color__navigation--text;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .open .navigation-toggle {
+        background-color: transparent;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .page--default .template-header .profile .tweet-content a {
+        color: #595959;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+
+.page--default {
+    .footer-container {
+        @media @bp-global-small {
+            padding: 90px 20px 50px!important;
+        }
+        @media @mobile {
+            padding: 90px 20px 50px!important;
+        }
+    }
+}
+
+// Footer Container
+.footer-container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    display: block;
+    h3 {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    @media @bp-global-small {
+        max-width: 100%;
+    }
+    @media @mobile {
+        max-width: 100%;
+        display: block;
+        padding: 50px 20px;
+    }
+}
+
+// Footer content 
+.footer-content-1 {
+    margin-bottom: 10px;
+}
+
+
+// Template Footer
+.template-footer {
+    width: 100%;
+    background-color: @color__footer--background;
+    padding: 15px 3%;
+
+    .social-item {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    @media @bp-global-small {
+        padding: 25px 3%;
+        text-align: center;
+    }
+}
+
+.footer-container .widget-overlay {
+    z-index: 999;
+}
+
+.template-footer .flex-container {
+
+    .flex-display(@display: flex);
+    .flex-wrap(@wrap: nowrap);
+    .justify-content(@justify: space-between);
+    .align-content(@align: center);
+    .align-items(@align: stretch);
+
+    margin-bottom: 0;
+}
+
+// Alignment in profile widgets
+.flex-profile1 {
+    text-align: left;
+    @media only screen and (max-width : 1024px) {
+        margin: 10px 10px 10px 0;
+    }
+    @media @tablet {
+        margin: 0 auto;
+    }
+}
+
+.flex-profile2 {
+    text-align: right;
+    margin: 15px 0 15px 10px;
+    @media only screen and (max-width : 1024px) {
+        margin: 10px 0 10px 10px;
+    }
+    @media @tablet {
+        margin: 0 auto;
+    }
+}
+
+// Fixes overlay issue in the editor when trying to edit the content widget above the footer.

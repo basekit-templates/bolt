@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--default">
+
+
+    <!-- Header -->
+    {% include "includes/header.twig" %}
+
+    <!-- Zone Content -->
+    <div class="main-content">
+
+        <div class="container">
+
+            <div class="main-zone">
+
+                {{zone('main')|raw}}
+
+            </div>
+
+        </div>
+
+    </div>
+    
+{% include "includes/footer.twig" %}
+
+
+</section>
+
+
+{% endblock %}

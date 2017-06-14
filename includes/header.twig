@@ -1,0 +1,27 @@
+<!-- Header -->
+<header class="template-header">
+	<div class="container">
+		<div class="flex-item">
+			<div class="widget-profile-header">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                    "business": "profile"
+                })|raw}}
+			</div>
+		</div>
+        <div class="flex-item">
+
+                <nav class="nav">
+                    {{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+                </nav>
+
+                <div class="nav-toggle">
+                    <div class="icon"></div>
+                </div>
+
+            </div>
+	</div>
+</header>
+
+
+

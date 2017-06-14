@@ -1,0 +1,186 @@
+// ------------------------------------------------
+// Agency Template: CSS > Widgets > Sign Up Form
+// ------------------------------------------------
+
+
+.widget__signupform {
+
+    margin-top: 100px;
+
+    @media @mobile {
+        margin-top: 60px;
+    }
+
+    // Legend
+    // ------------------------------
+
+
+    .legend {
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
+        font-family: @font__h1--font-family;
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+        font-weight: @font__h1--font-weight;
+        width: 100%;
+        z-index: 9999;
+        text-transform: uppercase;
+        @media @bp-global-small {
+            padding: 0px 20px 0px 20px;
+            font-size: bkscale(@font__h1--font-size, 0.9);
+            line-height: bkscale(@font__h1--line-height, 0.9);
+        }
+    }
+
+
+    label {
+        padding-top: 10px;
+    }
+
+
+    // Form Body
+    // ------------------------------
+
+
+    .form-body {
+        margin: 0 auto;
+        background-color: @color__form--background;
+
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: nowrap);
+        .justify-content(@justify: flex-start);
+        .align-content(@align: stretch);
+
+        @media @bp-global-small {
+            width: 100%;
+            padding: 40px 20px 30px 20px;
+        }
+        @media @mobile {
+            display: block;
+            padding: 50px 20px 20px 20px;
+        }
+    }
+
+    .responsivecolumns {
+
+        // Form Body
+        .form-body {
+            width: 100%;
+        }
+
+    }
+
+
+
+
+    // Form Group
+    // ------------------------------
+
+
+    .form-group {
+        margin-bottom: 0;
+        &:first-child {
+            .flex(@columns: 1 1 auto);
+
+            @media @mobile {
+                margin-bottom: 20px;
+            }
+        }
+        &:last-child {
+
+            .flex(@columns: 0 1 auto);
+            .align-content(@align: flex-end);
+            .align-items(@align: flex-end);
+            .justify-content(@justify: flex-start);
+            .flex-display(@display: flex);
+
+            vertical-align: bottom;
+        }
+
+    }
+
+    // Last Form Group
+
+    .form-group:last-of-type {
+        margin: 0;
+    }
+
+    .button {
+        background-color: darken(@color__button--background, 5%);
+        padding: 10px 26px;
+        margin: 0;
+    }
+
+
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // Form Body
+
+    .widget__signupform .form-body {
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+    }
+
+    .form-group:last-child {
+
+    }
+    
+    .widget__signupform .legend {
+        @media @bp-1300px {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    // 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        .widget__signupform {
+            margin-top: 60px;
+        }
+
+
+
+        .widget__signupform:before {
+            margin-top: -30px;
+        }
+    
+        // Form Body
+    
+        .widget__signupform .form-body {
+            display: block;
+        }
+    
+        // First Form Group
+    
+        .widget__signupform .form-group:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}

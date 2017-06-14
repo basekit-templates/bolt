@@ -1,0 +1,235 @@
+// ------------------------------------------------
+// Agency Template: CSS > Widgets > Contact Form
+// ------------------------------------------------
+
+
+.contactform {
+    background-color: @color__form--background;
+    margin-top: 100px;
+
+
+    // Fieldset
+    // ------------------------------
+    
+    
+    .fieldset {
+    	position: relative;
+    }
+    
+    
+    
+    
+    // Form Group
+    // ------------------------------
+    
+    
+    .form-group {
+    	margin-bottom: 26px;
+    	@media @bp-global-small {
+    		margin-bottom: 16px;
+    	}
+    
+    
+    	&:last-of-type {
+    		margin-bottom: 0;
+    	}
+    
+    }
+    
+    
+    
+    
+    // Form Body
+    // ------------------------------
+    
+    
+    .form-body {
+    	margin: 0 auto;
+    	background-color: @color__form--background;
+    	padding: 0;
+    
+        @media @bp-global-small {
+            width: 100%;
+        }
+    }
+    
+    
+    
+    
+    // Legend
+    // ------------------------------
+    
+    
+    .legend {
+    	color: @color__form-legend--text;
+    	font-family: @font__h1--font-family;
+    	font-size: @font__h1--font-size;
+    	line-height: @font__h1--line-height;
+        font-weight: @font__h1--font-weight;
+        width: 100%;
+        padding: 0;
+        z-index: 9999;
+        text-transform: uppercase;
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.9);
+            line-height: bkscale(@font__h1--line-height, 0.9);
+        }
+    }
+    
+    
+    
+    
+    // Label
+    // ------------------------------
+    
+    
+    .label--message {
+    	 @media @mobile {
+            font-size: bkscale(@font__p--font-size, 0.9);
+        }
+    }
+    
+    
+    
+    
+    // Input and Textarea
+    // ------------------------------
+    
+    
+    .input,
+    .textarea {
+        background-color: #242424;
+        padding: 10px;
+        border: 5px solid #353535;
+        &:focus {
+            border-color: #353535;
+            box-shadow: none;
+        }
+    }
+    
+    
+    // Button
+    // ---------------------
+    
+    .button {
+        background-color: darken(@color__button--background, 5%);
+    }
+
+}
+
+
+
+
+// ---------------------------------
+// Advanced Form
+// ---------------------------------
+
+.widget__advancedcontactform {
+    background-color: @color__form--background;
+
+    .legend {
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
+        font-family: @font__h1--font-family;
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+        font-weight: @font__h1--font-weight;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .input,
+    .textarea {
+        background-color: #242424;
+        padding: 10px;
+        border: 5px solid #353535;
+        &:focus {
+            border-color: #353535;
+            box-shadow: none;
+        }
+    }
+
+    .form-body {
+
+    }
+
+    .button {
+        background-color: darken(@color__button--background, 5%);
+        padding: 10px 26px;
+        margin: 0;
+    }
+
+    .select-wrap {
+        background-color: white;
+    }
+
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+.responsivecolumns {
+
+    .contactform__legend,
+    .widget__signupform .legend,
+    .widget__blogsearch .legend {
+        padding: 0px 20px 0px 20px;
+    }
+
+	// Form Body
+	.contactform__form-body {
+		float: none;
+		width: auto;
+		padding: 0;
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+	}
+
+	.contactform__form-group {
+		margin-bottom: 16px;
+	}
+
+
+    // 4 columns
+    // ------------------------------
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+    
+        // Forms
+
+        .contactform {
+            margin-top: 60px;
+        }
+
+        .contactform:before {
+            margin-top: -30px;
+        }
+
+        .advancedcontactform__legend {
+            width: 100%!important;
+            font-size: 20px;
+        }
+
+        .advancedcontactform__form-group {
+        }
+
+        .widget__contactform .legend {
+            @media @bp-1300px {
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+    }
+}
+

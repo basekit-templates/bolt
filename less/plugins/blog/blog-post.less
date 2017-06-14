@@ -1,0 +1,98 @@
+// ----------------------------------------------
+// Agency Template: CSS > Plugins > Blog > Blog 
+// ----------------------------------------------
+
+
+.blogpost__post-article {
+    position: relative;
+}
+
+.blogpost__post-title {
+    color: @color__blogpost-title--text;
+    @media @bp-global-small {
+        font-size: bkscale(@font__h1--font-size, 0.8);
+        line-height: bkscale(@font__h1--line-height, 0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__h1--font-size, 0.7);
+        line-height: bkscale(@font__h1--line-height, 0.7);
+    }
+}
+
+.blogpost__post-image {
+    position: absolute;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    max-width: 35%;
+    @media @bp-1300px {
+        max-width: 100%;
+        margin-left: 0;
+        position: relative;
+    }
+}
+
+.blogpost__image-link {
+    height: 300px;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+}
+
+.blogpost__post-content {
+    max-width: 60%;
+    float: right;
+    margin: 0;
+    @media @bp-1300px {
+        max-width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}
+
+.blogpost__post-footer {
+    margin-left: 0;
+    padding-top: 300px;
+    @media @bp-1300px {
+        max-width: 100%;
+        margin-left: 0;
+        position: relative;
+        top: 0;
+    }
+}
+
+.blogpost__image {
+    display: none;
+}
+
+.blogpost {
+    .post-footer .timestamp {
+        background-color: @color-swatch2;
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 14px;
+        @media @bp-1300px {
+            margin: 0;
+        }
+    }
+}
+
+.blogpost__category-title,
+.blogpost__tags-title {
+    display: block;
+}
+
+.network-item {
+    margin-bottom: 10px;
+}
+
+.blogpost__category-link,
+.blogpost__tag-link {
+    .underline;
+}
+
+.post-category {
+    margin-bottom: 10px;
+}

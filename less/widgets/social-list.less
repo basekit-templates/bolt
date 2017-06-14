@@ -1,0 +1,65 @@
+// -----------------------------------------------
+// Agency Template: CSS > Widgets > Social List
+// -----------------------------------------------
+
+
+// Social Link
+// ------------------------------
+
+
+.social-link {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	transition: all 0.8s;
+	background-color: @color__socialicons--icon--background;
+
+	&:hover {
+        box-shadow:300px 0 0 0 @color__socialicons--icon--background--hover inset;
+	}
+
+	// Icon
+
+	&:before {
+		font-size: 38px;
+    	display: block;
+    	width: 70px;
+    	height: 70px;
+    	line-height: 70px;
+		color: @color__socialicons--icon;
+		margin: 0 auto;
+
+		@media @bp-global-small {
+			font-size: 20px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+
+	}
+
+	// Icon hover
+	&:hover:before {
+        color: @color__socialicons--icon--hover;
+	}
+}
+
+.social-item {
+    margin-bottom: 20px;
+}
+
+.social-link:before {
+    &:hover {
+        color: white;
+    }
+}
+
+
+
+// Social Name
+// ------------------------------
+
+
+.socialicons__social-name {
+	display: none;
+}

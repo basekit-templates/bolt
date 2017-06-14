@@ -1,0 +1,161 @@
+// ----------------------------------------------
+// Agency CSS > Widgets > Gallery
+// ----------------------------------------------
+
+
+.gallery {
+    @media @mobile {
+        margin-bottom: 10px;
+    }
+}
+
+// Gallery Image
+.gallery__image-link {
+    display: block;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 0;
+    @media @bp-global-small {
+        height: 210px;
+    }
+}
+
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery__gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; 
+}
+
+// Gallery Item
+.gallery__gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    overflow: hidden;
+    @media (max-width: 1200px) {
+        width: 49%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.gallery__image-link {
+    display: block!important;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 100%;
+    @media @bp-global-small {
+        height: 210px;
+    }
+}
+
+// Hide Img Element
+.gallery__image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery__caption {
+    box-shadow: 700px 0 0 0 @color__gallery-caption--background inset;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    transition: bottom 0.6s ease, opacity 0.6s ease;
+    padding: 15px 20px 30px;
+
+    @media @bp-global-small {
+        display: none;
+    }
+}
+
+// Show Caption
+.figure:hover .gallery__caption {
+    opacity: 1;
+    left: 0;
+}
+
+// Image Title
+.gallery__image-title {
+    margin-right: 20px;
+    padding-top: 1px;
+    color: @color__gallery-title--text;
+    font-family: @font__h4--font-family;
+    font-size: 18px;
+    line-height: @font__h4--line-height;
+}
+
+// Image Description
+.gallery__image-description {
+    font-family: @font__h4--font-family;
+    font-size: 14px;
+    line-height: @font__h4--line-height;
+    color: @color__gallery-description--text;
+}
+
+
+
+// -----------------------------
+// #Responsive Columns
+// -----------------------------
+
+
+// All Columns
+// ------------------------------
+
+.responsivecolumns {
+
+
+    .gallery__gallery-item {
+        width: 49%!important;
+    }
+
+    // 4 columns
+    // ------------------------------
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        .gallery__gallery-item {
+            width: 100%!important;
+        }
+
+    }
+}

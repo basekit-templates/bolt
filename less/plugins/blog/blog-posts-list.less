@@ -1,0 +1,126 @@
+// ------------------------------------------------------
+// Agency Template: CSS > Plugins > Blog > Blog Post List
+// ------------------------------------------------------
+
+
+.blogpostlist__title-link {
+    color: @color__blogpostlist-title--text;
+    font-size: @font__h3--font-size;
+    line-height: @font__h3--line-height;
+    font-family: @font__h3--font-family;
+    margin-left: -80px;
+}
+
+.blogpostlist__post-article {
+    .flex-display(@display: flex);
+    .flex-direction(@direction: row);
+    .flex-wrap(@wrap: nowrap);
+    .justify-content(@justify: center);
+    .align-content(@align: center);
+    .align-items(@align: center);
+
+    padding: 10px;
+    @media @bp-global-small {
+        display: block;
+        padding: 20px;
+    }
+}
+
+.blogpostlist__post-image {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 49%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 49%,rgba(0,0,0,0.02) 50%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 49%,rgba(0,0,0,0.02) 50%,rgba(0,0,0,0.8) 100%);
+}
+
+.blogpostlist__post-content {
+    .flex(1 1 50%);
+    .align-self(@align: auto);
+
+    margin-right: 20px;
+    padding: 30px;
+    @media @bp-global-small {
+        padding-top: 0;
+        margin-right: 0;
+    }
+}
+
+.blogpostlist__pagination-item {
+    &:first-child {
+        float: left;
+    }
+    &:last-child {
+        float: right;
+    }
+}
+
+.blogpostlist__post-footer {
+    background-color: @color__h3--text;
+    padding: 10px;
+    margin-right: 40px;
+    position: absolute;
+    left: 0;
+    @media @bp-global-small {
+        display: inline-block;
+        margin-right: 0;
+    }
+}
+
+.blogpostlist {
+    .post-image .image {
+        max-height: 350px;
+        max-width: 400px;
+        width: 400px;
+        -webkit-box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+        -moz-box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+        box-shadow: -1px -66px 185px -10px rgba(0,0,0,1);
+    }
+}
+
+.responsivecolumns {
+
+    .blogpostlist__post-article {
+        display: block;
+    }
+
+    .blogpostlist__post-content {
+        padding: 0;
+    }
+
+    .blogpostlist__post-footer {
+        display: inline-block;
+    }
+
+    // Form Body
+    .contactform__form-body {
+        float: none;
+        width: auto;
+        padding: 0;
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+    }
+
+    .contactform__form-group {
+        margin-bottom: 16px;
+    }
+
+
+    // 4 columns
+    // ------------------------------
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        .blogpostlist__post-article {
+            padding: 20px;
+        }
+
+        .blogpostlist .post-image .image {
+            width: 100%;
+        }
+    }
+}

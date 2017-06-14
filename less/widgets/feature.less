@@ -1,0 +1,276 @@
+// -------------------------------------------
+// Agency Template: CSS > Widgets > Feature
+// -------------------------------------------
+
+
+// Hero
+// ------------------------------
+
+.hero {
+    position: relative;
+    @media @mobile {
+        .flex-display;
+        .flex-direction(column);
+    }
+
+    [data-widget-type="feature"] {
+        .flex-order(2);
+        z-index: 2;
+    }
+}
+
+
+// Hero Logo
+// ------------------------------
+
+.hero-logo {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10001;
+    padding: 20px;
+    width: 100%;
+    min-height: 200px;
+    height: 119%;
+    z-index: 30;
+    padding: 0 40px;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    @media @bp-global-small {
+        bottom: 6%;
+        top: inherit;
+        min-height: inherit;
+        height: inherit;
+    }
+    @media @mobile {
+        bottom: 10%;
+    }
+}
+
+
+
+
+// Feature Overlay Toggle Buttons
+// ------------------------------
+
+[data-widget-type="feature"] .widget-overlay .widget__list {
+    top: 100px!important;
+}
+
+
+
+
+// Feature Background (Image)
+// --------------------------
+
+.feature, .bk-feature {
+    text-align: left;
+    overflow: hidden;
+}
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: bottom center!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    height: 500px;
+    width: 100%;
+    @media @bp-global-small {
+        min-height: 300px;
+        max-height: 500px;
+        background-attachment: scroll!important;
+    }
+    @media @mobile {
+        min-height: 200px;
+        max-height: 400px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    display: table-cell;
+    padding: 150px 10% 60px;
+    vertical-align: middle;
+    height: 100vh;
+    z-index: 9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex-direction: column;
+    @media @bp-1300px { 
+        padding: 150px 40px 60px;
+    }
+    @media @bp-global-small {
+        padding: 20px 4%;
+        height: 600px;
+        align-items: flex-start;
+    }
+}
+
+.feature {
+    .background-image {
+        display: table;
+        width: 100%;
+        background-size: cover;
+        // Overlay
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            background: @color__feature-content--background; /* fallback for old browsers */
+
+        }
+    }
+}
+
+.feature__content-inner-wrap {
+    max-width: 50%;
+    z-index: 9;
+    position: relative;
+    @media @mobile {
+        max-width: 100%;
+    }
+}
+
+// Feature Content
+// ---------------
+
+
+// Feature Headline
+.feature__headline {
+    position: fixed;
+    left: 50px;
+    top: 15vh;
+    z-index: -1;
+    display: inline;
+    padding-bottom: 10px;
+    background-repeat: repeat-x;
+    background-position: 0 90%;
+    text-transform: uppercase;
+    @media @bp-global-small {
+        position: relative;
+        font-size: bkscale(@font-swatch8-font-size,0.8);
+        line-height: bkscale(@font-swatch8-line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch8-font-size,0.6);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+        background-size: 0, 20px 4px;
+        background-position: 0 80%;
+        left: 0;
+        top: 0;
+    }
+}
+
+// Feature Strapline
+.feature__strapline {
+    z-index: 2;
+    text-align: left;
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch9-font-size,1);
+        line-height: bkscale(@font-swatch9-line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch9-font-size,1);
+        line-height: bkscale(@font-swatch9-line-height,1);
+        margin-top: 10px;
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button { 
+    margin: 10px 0 0 0;
+    background-color: @color__feature-button--background;
+    color: @color__feature-button--text;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+        color: white;
+        &:after {
+            color: lighten(@color-swatch2,10%);
+        }
+    } 
+}
+
+
+
+// Feature Overlay
+// ------------------------------
+
+
+[data-widget-type="feature"] ul.widget__list.list--options {
+    position: absolute;
+    top: auto !important;
+    bottom: 50% !important;
+}
+
+
+// Feature Arrow
+// ------------------------------
+
+.feature-arrow {
+    position: absolute;
+    top: calc(@value__feature--height--desktop - 100px);
+    z-index: 9999;
+    max-width: @value__container--width;
+    opacity: .6;
+
+    @media @bp-global-medium {
+        top: @value__feature--height--tablet;
+    }
+    @media @bp-global-small {
+        top: calc(@value__feature--height--tablet - 100px);
+    }
+    @media @mobile {
+        display: none;
+    }
+}
+
+.feature-arrow-link {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    z-index: 99;
+    background-color: @color-swatch2;
+
+    background-image: image('/images/down-arrow.png');
+    background-image: image('/images/down-arrow.svg');
+    .box-shadow;
+
+    @media @bp-1300px {
+        display: none;
+    }
+}
+
+
+
+
+

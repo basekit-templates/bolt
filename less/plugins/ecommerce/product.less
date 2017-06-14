@@ -1,0 +1,552 @@
+// -------------------------------------------------------
+// Agency Template: CSS > Plugins > Ecommerce > Product
+// -------------------------------------------------------
+
+
+
+
+// ---------------------------------
+// Breakpoints for Product layouts
+// ---------------------------------
+
+
+
+
+@product-large: ~"only screen and (min-width : 769px)";
+@product-medium: ~"only screen and (max-width : 769px)";
+@product-small: ~"only screen and (max-width : 400px)";
+
+@bp-product-rows: ~"only screen and (max-width : 769px)";
+
+
+
+// ------------------------------
+// Product
+// ------------------------------
+
+
+.ecomproduct {
+
+
+    // ------------------------------
+    // Product Article
+    // ------------------------------
+    
+    .product-article {
+        .flex-display;
+
+        @media @bp-global-small {
+            display: block;
+        }
+    }
+
+    .product-images {
+        .flex-order(@order: 1);
+        .flex(1 1 30%);
+
+        margin-right: 20px;
+    }
+
+    .product-content {
+        .flex-order(@order: 2);
+        .flex(1 1 70%);
+
+        @media @bp-global-small {
+            margin-right: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .product-header {
+
+    }
+    
+    
+    // Product Gallery
+    // ------------------------------
+    
+    
+    .product-gallery {
+        overflow: hidden;
+    
+        @media @bp-global-medium {
+            position: relative;
+            max-width: 390px;
+            overflow: hidden;
+            height: 60px;
+        }
+    
+        @media @bp-global-small, @mobile {
+            position: relative;
+            max-width: 270px;
+            height: 40px;
+            padding-left: 3%;
+        }
+    
+        // Gallery Item
+    
+        .gallery-item {
+            font-size: 0;
+            position: relative;
+            background-color: #fff;
+            border: 2px solid #fff;
+            max-height: 100%;
+    
+            @media @bp-global-large {
+                float: none;
+                margin-bottom: 16px;
+                line-height: 74px;
+            }
+    
+            @media @bp-global-medium, @bp-global-small {
+                float: left;
+            }
+    
+            @media @bp-global-medium {
+                width: 60px;
+                height: 60px;
+                line-height: 56px;
+                margin-right: 6px;
+            }
+            @media @bp-global-small {
+                width: 40px;
+                height: 40px;
+                line-height: 36px;
+                margin-right: 6px;
+            }
+        }
+    
+        // Image Button
+    
+        .image-button {
+            display: inline-block;
+            line-height: 76px;
+            height: 80px;
+            height: 100%;
+            @media @bp-global-medium {
+                line-height: 56px;
+                height: 60px;
+            }
+            @media @bp-global-small {
+                line-height: 36px;
+                height: 40px;
+            }
+    
+            // Image
+    
+            .image {
+                line-height: 76px;
+                display: inline-block;
+                vertical-align: middle;
+                max-height: 100%;
+                @media @bp-global-medium {
+                    line-height: 56px;
+                }
+                @media @bp-global-small {
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+    
+    
+    // Custom Image Gallery Slider Button
+    // ----------------------------------
+    // Appended via JS
+    
+    .ecom-view-more {
+        .button;
+        background-color: lighten(desaturate(@color__primary, 80%), 14%);
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        bottom: 0;
+        left: 0;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        overflow: hidden;
+        text-indent: 150%;
+        z-index: 1000;
+        padding: 0;
+    
+        &:hover {
+            background-color: lighten(desaturate(@color__primary, 80%), 14%);
+        }
+    
+        @media @bp-global-medium {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            left: 330px;
+            top: 0;
+        }
+        @media @bp-global-small {
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            left: 230px;
+            top: 0;
+        }
+    
+        // Icon
+    
+        &:after {
+            font-family: 'FontAwesome', sans-serif;
+            content: '\f078';
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+            width: 100%;
+            font-size: 18px;
+            @media @bp-global-medium, @bp-global-small {
+                content: '\f054';
+            }
+        }
+    
+    }
+    
+    
+    
+    
+    // Product Image
+    // ------------------------------
+    
+    
+    .product-image {
+        background-color: #fff;
+    
+        body.product-one-image & {
+            @media @bp-global-large {
+                margin-left: 70px;
+            }
+        }
+    
+        &.no-image {
+            display: none;
+        }
+    }
+    
+    
+    
+    
+    // Image Link
+    // ------------------------------
+    
+    
+    .product-image .image-link {
+        display: block;
+        width: 100%;
+        background-size: contain;
+        background-position: center;
+        background-color: #fff;
+    
+        @media @bp-global-large {
+            padding: 26px;
+            height: 400px;
+        }
+        @media @bp-global-medium {
+            padding: 20px;
+            height: 350px;
+        }
+        @media @bp-global-small {
+            padding: 10px;
+            height: 300px;
+            background-position: left;
+        }
+        @media @mobile {
+            padding: 10px;
+            height: 200px;
+        }
+    }
+    
+    
+    
+    
+    // Image
+    // ------------------------------
+    
+     .product-image .image {
+        display: none;
+    }
+    
+    
+    
+    
+    
+    
+    // Product Title
+    // ------------------------------
+    
+    
+    .product-title {
+        padding-bottom: 0;
+        color: @color__ecomproduct-title--text;
+        margin-right: 20px;
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.8);
+        }
+        @media @mobile {
+            font-size: bkscale(@font__h1--font-size, 0.7);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
+    }
+    
+    
+    
+    
+    // Product Price
+    // ------------------------------
+    
+    
+    .ecomproduct__product-price {
+        color: @color__ecomproduct-price--text;
+        padding-bottom: 0;
+    }
+    
+    
+    
+    // ------------------------------
+    // Product Body
+    // ------------------------------
+    
+    
+    .product-body {
+    
+        margin: 16px 0 24px;
+    
+        // Paragraph
+        &, p {
+            @media @bp-global-small {
+                font-size: bkscale(@font__p--font-size, 0.9);
+                line-height: bkscale(@font__p--line-height, 0.9);
+            }
+        }
+    }
+    
+    
+    
+    
+    // ------------------------------
+    // Product Actions
+    // ------------------------------
+    
+    
+    .product-actions {
+        margin-bottom: 2em;
+    
+    
+    
+    
+        // Select Wrap
+        // ------------------------------
+    
+        .select-wrap {
+            margin-top: 6px;
+            padding: 0;
+            background-color: #fff;
+        }
+    
+        .select {
+            padding: 5px 10px;
+        }
+    
+    
+        // Legend
+        // ------------------------------
+    
+        .legend {
+            display: none;
+        }
+    
+    
+    
+    
+        // Fieldset
+        // ------------------------------
+    
+        .fieldset {
+            margin-bottom: 1em;
+        }
+    
+    
+    
+    
+        // Form Group
+        // ------------------------------
+    
+    
+        .form-group {
+            display: inline-block;
+            min-width: 100px;
+            margin: 0 1em 0 0;
+            float: left;
+            margin-bottom: 10px;
+    
+    
+    
+    
+            // Label
+            // ------------------------------
+    
+            .label {
+                padding: 5px 0;
+                font-family: @font__h4--font-family;
+                font-size: 12px;
+                letter-spacing: 2px;
+                line-height: 1;
+                display: block;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+    
+    
+    
+    // ------------------------------
+    // Product Attributes
+    // ------------------------------
+    
+    
+    .product-attributes {
+        clear: both;
+    
+    
+    
+        // Attribute Title
+        // ------------------------------
+    
+    
+        .product-attribute-title {
+            line-height: 2;
+            padding: 0;
+            display: block;
+            margin: 0 0 0.25em 0;
+            font-size: 13px;
+        }
+    
+    
+    
+    
+        // Tag List
+        // ------------------------------
+    
+    
+        .tag-list {
+            display: block;
+            line-height: 1;
+        }
+    
+    
+    
+    
+        // Tag Item
+        // ------------------------------
+    
+    
+        .tag-item {
+            line-height: 1;
+            margin-right: 1em;
+            margin-bottom: 0.5em;
+        }
+    
+    
+    
+    
+        // Product Category, Product Tags
+        // ------------------------------
+    
+    
+        .product-category, .product-tags {
+            display: block;
+            vertical-align: top;
+            line-height: 1;
+            margin: 0 0 1em 0;
+    
+    
+            // P
+    
+            p {
+                line-height: 1;
+            }
+        }
+    
+    
+    
+    
+        // Category Link, Tag Link
+        // ------------------------------
+    
+    
+        .category-link, .tag-link {
+            color: @color-swatch2;
+            .underline;
+            font-size: 14px;
+    
+            @media @bp-global-medium {
+                font-size: bkscale(@font__p--font-size, 0.9);
+                line-height: bkscale(@font__p--line-height, 0.9);
+            }
+    
+            @media @bp-global-small {
+                font-size: bkscale(@font__p--font-size, 0.8);
+                line-height: bkscale(@font__p--line-height, 0.8);
+            }
+        }
+    }
+
+
+}
+
+// -----------------------------
+// #Responsive Columns
+// -----------------------------
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    .product-item {
+        width: 49%;
+    }
+
+    .product-item-details {
+        margin: 0;
+    }
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+        
+        .ecomproduct .product-content {
+            padding: 20px;
+        }
+
+        .ecomproductslist .form {
+            margin-bottom: 0;
+        }
+
+        .product-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+}

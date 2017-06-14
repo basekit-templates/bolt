@@ -1,0 +1,517 @@
+// -------------------------------------------
+// Agency Template: CSS > Widgets > Profile
+// -------------------------------------------
+
+
+.profile {
+
+
+    // Typography
+    a, h2, h3, p {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+    }
+    h2, h3, p {
+        .paragraph;
+    }
+
+
+    // Twitter
+    .twitter__avatar-image {
+        display: none;
+    }
+
+    .twitter__avatar {
+        @media @bp-global-small {
+            float: left;
+        }
+    }
+
+    .tweet-item {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+    }
+    .tweet-content {
+       padding: 0;
+    }
+    .js-twitter {
+        .clearfix;
+    }
+
+
+    // Address
+    .address p {
+        padding-left: 10px;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: -6px;
+            display: inline-block;
+            content: ",";
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+
+
+    // Form
+    .form-body {
+        .flex-display;
+        .justify-content(flex-start);
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .label {
+        display: none;
+    }
+    .legend {
+        margin-bottom: 20px;
+    }
+    .input {
+        max-width: 250px;
+        margin-right: 20px;
+    }
+
+}
+
+
+// Header Profile
+// --------------
+
+.template-header {
+
+    // Flex Item
+    .flex-item:last-child {
+        .profile__signupform {
+            float: right;
+            margin-left: 0px;
+            @media @mobile {
+                float: inherit;
+                max-height: inherit!important;
+            }
+        }
+    }
+
+    // Click To Call 
+    .widget__clicktocall .phone-number-link {
+        background-color: transparent;
+        text-transform: uppercase;
+        -webkit-font-smoothing: inherit;
+        padding: 10px 15px;
+    }
+
+    .clicktocall__label {
+        @media @bp-global-small {
+            display: none;
+        }
+    }
+
+    .clicktocall__phone-number {
+        @media @mobile {
+            display: none;
+        }
+    }
+
+    .icon--phone:before {
+        @media @mobile {
+            font-size: 18px;
+        }
+    }
+
+    // Twitter Wrap
+    .twitter__tweet-wrap {
+        padding: 0;
+    }
+
+    .twitter__account-link, 
+    .twitter__tweet-meta {
+        display: none;
+    }
+
+    // Profile
+    .profile {
+
+        .profile__map {
+            @media @bp-global-small {
+                margin-top: 20px;
+            }
+        }
+        .input {
+            border: 2px solid #e6e6e6;
+            background-color: transparent!important;
+            &:hover {
+                background-color: transparent!important;
+            }
+        }
+        .button {
+            border-right: 2px solid #e6e6e6;
+            border-top: 2px solid #e6e6e6;
+            border-bottom: 2px solid #e6e6e6;
+            top: 0;
+            @media @bp-global-small {
+                line-height: 40px;
+            }
+        }
+        .signupform {
+            margin-left: 0;
+        }
+        @media @mobile {
+            padding-left: 0px;
+
+            .twitter,
+            .companyaddress,
+            .companydescription,
+            .companycopyright {
+                padding-top: 6px;
+            }
+            .companyheadline,
+            .companystrapline {
+                padding: 6px 0;
+                line-height: 18px;
+            }
+        }
+
+        // Typography
+        a, h1, h2, h3, h4, p {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0;
+            font-family: @font__h4--font-family;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #bebebe;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+
+            @media @mobile {
+                line-height: 18px;
+            }
+        }
+
+        // Email
+        .emailaddress__email {
+            @media @bp-global-small {
+                .flex-display;
+                color: transparent;
+
+                &:before,
+                &:after {
+                    font-family: 'FontAwesome', sans-serif;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+
+                &:before {
+                    display: inline-block;
+                    content: "\f003";
+                    font-size: 22px;
+                    color: @color__feature-headline--text;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        // Telephone
+        .phone-number {
+            @media @bp-global-small {
+                display: none;
+            }
+        }
+        .phone-number-link:before {
+            display: none;
+
+            @media @bp-global-small {
+                position: relative;
+                top: 3px;
+                display: inline-block;
+                font-size: 24px;
+            }
+            @media @mobile {
+                font-size: 21px;
+            }
+        }
+
+        // Address
+        .companyaddress {
+            margin-left: -10px;
+        }
+        .address p {
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        // Strapline / Description
+        .strapline,
+        .description,
+        .tweet-content,
+        .tweet-content a,
+        .copyright {
+            font-size: 12px;
+            line-height: 22px;
+
+            @media @mobile {
+                line-height: 18px;
+            }
+        }
+
+        // Social Icons
+        .social-item {
+            margin: 0;
+
+            @media @medium {
+                margin-right: 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            @media @mobile {
+                margin-bottom: 0;
+            }
+        }
+        .social-link {
+            padding: 10px!important;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+            background-color: transparent!important;
+            -webkit-transition: all ease 0.6s;
+            -moz-transition: all ease 0.6s;
+            transition: all ease 0.6s;   
+            &:hover {
+                box-shadow: inset 250px 0 0 0 @color__button--background--hover;
+                color: @color__button--text;
+                background-color: transparent!important;
+            }
+            &:before {
+                width: auto;
+                background-color: transparent;
+                height: 100%;
+                line-height: 100%;
+            }
+        }
+
+        // Twitter
+        .twitter__avatar-image {
+            display: none;
+        }
+
+        .account-name {
+            color: white;
+        }     
+
+        .tweet-content {
+
+            a {
+                color: white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+        // Form
+        // ----------
+
+        .signupform {
+            padding-bottom: 0;
+
+            @media @mobile {
+                max-height: 43px;
+            }
+        }
+
+        .legend {
+            display: block;
+            margin-bottom: 0!important;
+        }
+
+        .form-body {
+            .justify-content(inherit);
+            @media @mobile {
+                .justify-content(center);
+            }
+        }
+
+        // Input
+        .input,
+        .button {
+            .feature__button;
+            margin: 0;
+            box-shadow: none;
+            line-height: 40px;
+
+            @media @mobile {
+                border-width: 1px;
+                line-height: 43px;
+            }
+        }
+        .input {
+            max-width: 170px;
+            margin-top: 0;
+
+            @media @mobile {
+                max-width: 140px;
+            }
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            margin-top: 0;
+            padding: 0 10px;
+        }
+
+    }
+
+
+    // Profile Message
+    // ---------------
+
+    .message {
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+    .bk-message {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+        border-radius: 0;
+        color: @color__companyname--text;
+
+        @media @mobile {
+            padding-top: 8px;
+            background-image: image('/images/msg-empty.png');
+        }
+
+        p {
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+        }
+    }
+
+
+    // Facebook
+    // ---------------
+
+    .account-name {
+        @media @mobile {
+            margin-left: 0;
+        }
+    }
+
+}
+
+
+
+// Footer Profile
+// --------------
+
+
+.template-footer {
+    .container {
+        width: 100%;
+    }
+    input[type="email"] {
+        height: 53px;
+    }
+    .profile {
+        h1, h2, h3, h4, p, a, span {
+            color: lighten(@color__footer--background,40%);
+        }
+        .legend {
+            color: white;
+            @media @bp-global-small {
+                text-align: left;
+            }
+        }
+    }
+    .tweet-content a {
+        color: white;
+    }
+    .tweet-wrap {
+        padding: 0;
+    }
+    .profile .twitter__avatar-image {
+        display: block;
+    }
+    .social-link {
+        padding: 10px!important;
+        background-color: transparent!important;
+        -webkit-transition: all ease 0.6s;
+        -moz-transition: all ease 0.6s;
+        transition: all ease 0.6s;   
+        &:hover {
+            box-shadow: inset 250px 0 0 0 @color__button--background--hover;
+            color: @color__button--text;
+            background-color: transparent!important;
+        }
+        &:before {
+            width: auto;
+            background-color: transparent!important;
+            color: @color__companyname--text;
+            height: 100%;
+            line-height: 100%;
+        }
+    }
+    .account-name {
+        color: white;
+    }
+    .contactform__form-body {
+        background-color: transparent!important;
+    }
+}
+
