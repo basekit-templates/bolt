@@ -224,10 +224,6 @@
                 margin-left: 70px;
             }
         }
-    
-        &.no-image {
-            display: none;
-        }
     }
     
     
@@ -243,6 +239,7 @@
         background-size: contain;
         background-position: center;
         background-color: #fff;
+        box-shadow: inset -70px 0px 100px #000;
     
         @media @bp-global-large {
             padding: 26px;
@@ -285,7 +282,7 @@
     .product-title {
         padding-bottom: 0;
         color: @color__ecomproduct-title--text;
-        margin-right: 20px;
+        margin-left: -60px;
         @media @bp-global-small {
             font-size: bkscale(@font__h1--font-size, 0.8);
             line-height: bkscale(@font__h1--line-height, 0.8);

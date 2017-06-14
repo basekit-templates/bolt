@@ -170,11 +170,6 @@
     background-repeat: repeat-x;
     background-position: 0 90%;
     text-transform: uppercase;
-    @media @bp-global-small {
-        position: relative;
-        font-size: bkscale(@font-swatch8-font-size,0.8);
-        line-height: bkscale(@font-swatch8-line-height,0.8);
-    }
     @media @mobile {
         font-size: bkscale(@font-swatch8-font-size,0.6);
         line-height: bkscale(@font-swatch8-line-height,0.6);
@@ -182,6 +177,7 @@
         background-position: 0 80%;
         left: 0;
         top: 0;
+        position: relative;
     }
 }
 
