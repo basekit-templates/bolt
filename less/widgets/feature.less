@@ -117,7 +117,7 @@
     @media @bp-1300px { 
         padding: 150px 40px 60px;
     }
-    @media @bp-global-small {
+    @media @mobile {
         padding: 20px 4%;
         height: 600px;
         align-items: flex-start;
@@ -170,9 +170,13 @@
     background-repeat: repeat-x;
     background-position: 0 90%;
     text-transform: uppercase;
+    @media @bp-1300px {
+        font-size: 180px;
+        line-height: 150px;
+    }
     @media @mobile {
-        font-size: bkscale(@font-swatch8-font-size,0.6);
-        line-height: bkscale(@font-swatch8-line-height,0.6);
+        font-size: bkscale(@font-swatch1-font-size,0.8);
+        line-height: bkscale(@font-swatch1-line-height,0.8);
         background-size: 0, 20px 4px;
         background-position: 0 80%;
         left: 0;

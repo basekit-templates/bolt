@@ -45,6 +45,10 @@
         .flex(1 1 30%);
 
         margin-right: 20px;
+
+        @media @bp-global-small {
+            margin-right: 0;
+        }
     }
 
     .product-content {
@@ -286,6 +290,7 @@
         @media @bp-global-small {
             font-size: bkscale(@font__h1--font-size, 0.8);
             line-height: bkscale(@font__h1--line-height, 0.8);
+            margin-left: 0;
         }
         @media @mobile {
             font-size: bkscale(@font__h1--font-size, 0.7);
@@ -350,6 +355,7 @@
     
         .select {
             padding: 5px 10px;
+            font-size: 14px;
         }
     
     

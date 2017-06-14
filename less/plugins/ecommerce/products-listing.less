@@ -168,7 +168,8 @@
         }
     }
 
-    .ecomproductslist__product-item-price {
+    .ecomproductslist__product-item-price,
+    .ecomfeaturedproducts__product-item-price {
         color: @color__link--text;
         font-size: @font__h4--font-size;
         line-height: @font__h4--line-height;
@@ -309,6 +310,7 @@
             width: 100%;
             text-align: center;
             display: block;
+            padding: 12px 26px;
         }
     }
 
@@ -341,7 +343,7 @@
                 text-align: center;
                 line-height: 44px;
                 font-size: 18px;
-                top: 5px;
+                top: 0;
                 left: 0;
                 bottom: 0;
                 right: 0;
@@ -474,7 +476,6 @@
 
 
 .product-item-details {
-    text-align: center;
     padding: 10px 20px;
     margin: 20px 0;
 
@@ -489,7 +490,6 @@
 .product-item-title {
     font-size: 36px;
     line-height: 46px;
-    text-align: right;
     color: @color__ecomproduct-title--text;
 
      // Title Links
@@ -502,9 +502,7 @@
 
 // Product Price
 .product-item-price {
-    .flex-display(@display: flex);
-    .justify-content(@justify: flex-end);
-    .flex(1 1 auto);
+    text-align: left;
 }
 
 

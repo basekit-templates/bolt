@@ -12,6 +12,9 @@
 
 .blogpostlist__post-title {
     margin-left: -60px;
+    @media @bp-global-small {
+        margin-left: 0;
+    }
 }
 
 .blogpostlist__post-article {
@@ -25,7 +28,7 @@
     padding: 10px;
     @media @bp-global-small {
         display: block;
-        padding: 20px;
+        padding: 0;
     }
 }
 
@@ -35,8 +38,13 @@
 .blogpostlist__image-link {
     background-position: inherit;
     box-shadow: inset -70px 0px 100px #000;
-    width: 400px;
+    width: 430px;
     height: 400px;
+    background-size: cover;
+    @media @bp-global-small {
+        width: 100%;
+        box-shadow: inset 2px -78px 130px -25px #000;
+    }
 }
 
 .blogpostlist .post-image .image {
@@ -47,11 +55,11 @@
     .flex(1 1 50%);
     .align-self(@align: auto);
 
-    margin-right: 20px;
-    padding: 30px;
+    margin-left: -20px;
     @media @bp-global-small {
         padding-top: 0;
-        margin-right: 0;
+        margin: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -73,6 +81,7 @@
     @media @bp-global-small {
         display: inline-block;
         margin-right: 0;
+        position: relative;
     }
 }
 

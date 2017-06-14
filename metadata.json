@@ -28,7 +28,7 @@
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "60px",
             "font-weight": "700",
-            "line-height": "70px",
+            "line-height": "60px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -36,7 +36,7 @@
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "50px",
             "font-weight": "700",
-            "line-height": "60px",
+            "line-height": "50px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -44,7 +44,7 @@
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "40px",
             "font-weight": "700",
-            "line-height": "50px",
+            "line-height": "40px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
