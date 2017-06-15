@@ -1,10 +1,10 @@
 {
-    "name":"Agency",
+    "name":"Bolt",
     "widgetVersion": 2,
-    "thumbnail":"agency.png",
+    "thumbnail":"bolt.png",
     "templateType":"standard",
     "pageTypes": [ "home", "default" ],
-    "screenshot":"agency-screenshot.jpg",
+    "screenshot":"bolt-screenshot.jpg",
      "images":[
         "images/image-1.jpg",
         "images/logo.png",
@@ -23,7 +23,7 @@
         }
     },
     "fontSwatch": {
-       "title": "Sanchez",
+       "title": "Montserrat",
         "font1": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "60px",
@@ -171,7 +171,7 @@
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "2px",
             "color__navigation--text": "#fff",
-            "color__navigation-list--background" : "@color-swatch3",
+            "color__navigation-list--background" : "@color-swatch4",
             "color__navigation-item--background--selected": "@color-swatch3"
         },
         "form": {
@@ -207,7 +207,7 @@
             "font__feature-headline--font-weight" : "700",
             "font__feature-headline--line-height" : "180px",
             "color__feature-headline--text" : "#383838",
-            "font__feature-headline--letter-spacing": "2px",
+            "font__feature-headline--letter-spacing": "-5px",
             "font__feature-strapline--font-family" : "@font-swatch9-font-family",
             "font__feature-strapline--font-size" : "18px",
             "font__feature-strapline--font-weight" : "400",
