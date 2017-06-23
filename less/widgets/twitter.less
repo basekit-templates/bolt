@@ -56,7 +56,11 @@
         .flex(@display: flex);
         .align-items(@align: center);
         .justify-content(@justify: flex-start);
-        .flex(1 1 auto);
+        -webkit-flex: 1 1;
+        -moz-flex: 1 1;
+        -ms-flex: 1 1;
+        flex: 1 1;
+    
 
         @media @bp-global-small {
             width: 100%;
