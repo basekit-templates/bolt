@@ -471,7 +471,7 @@
 .template-footer {
     width: 100%;
     background-color: @color__footer--background;
-    padding: 15px 3%;
+    padding: 5px 3%;
 
     .social-item {
         margin-right: 0;
@@ -502,6 +502,9 @@
 // Alignment in profile widgets
 .flex-profile1 {
     text-align: left;
+
+    .flex-display(@display: flex);
+    .align-items(@align: center);
     @media only screen and (max-width : 1024px) {
         margin: 10px 10px 10px 0;
     }

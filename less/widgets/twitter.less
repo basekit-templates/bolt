@@ -50,12 +50,13 @@
         display: inline-block;
         background-color: transparent;
         margin-bottom: 30px;
-        width: 25%;
+        margin-right: 20px;
         background-color: @color__twitter-item--background;
 
         .flex(@display: flex);
         .align-items(@align: center);
         .justify-content(@justify: flex-start);
+        .flex(1 1 auto);
 
         @media @bp-global-small {
             width: 100%;

@@ -235,13 +235,13 @@
             "color__menu-section-featured--background" : "#D6D6D6"
         },
         "blog": {
-            "color__blogsearch-legend--text" : "@color__form-legend--text",
-            "color__blogpost-title--text" : "#fff",
+            "color__blogsearch-legend--text" : "#383838",
+            "color__blogpost-title--text" : "#383838",
             "color__blogpostlist-title--text" : "#fff"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-title--text" : "@color__h2--text",
-            "color__ecomproduct-title--text" : "#fff",
+            "color__ecomproductslist-product-title--text" : "#383838",
+            "color__ecomproduct-title--text" : "#383838",
             "color__ecomproduct-price--text" : "#fff"
         }
     }
