@@ -103,6 +103,7 @@
 // ------------------------------
 
 .page--default {
+
     .template-header {
         background-color: fade(@color__feature-content--background 90%);
         position: relative;
@@ -112,6 +113,10 @@
         @media @bp-global-small {
             padding: 20px;
         }
+        @media @mobile {
+            padding: 20px 10px;
+        }
+
         .flex-item:first-child {
             .flex-display(@display: flex);
             .align-items(@align: center);
@@ -120,6 +125,7 @@
                 width: 100%;
             }
         }
+
         .flex-item {
             @media @bp-global-small {
                 &:last-child {
@@ -132,6 +138,7 @@
                 }
             }
         }
+
         .profile {
             .button {
                 top: 0;
@@ -146,21 +153,22 @@
                 color: @color__container--background;
             }
         }
+
         .company-link {
             color: @font-swatch10-color;
         }
+
         .container {
             @media @bp-global-small {
                 padding: 0;
             }
         }
-        .widget__logo {
-            margin: 10px!important;
-        }
     }
+
     .navigation-list .navigation-list--children {
         background-color: @color__feature-content--background;
     }
+
     .homepage-nav {
         z-index: 3;
         @media @bp-1300px {
@@ -170,6 +178,7 @@
             padding: 0;
         }
     }
+
     .main-content {
         top: 0;
         .container {
@@ -177,6 +186,7 @@
             background-color: @color__container--background;
         }
     }
+
     .template-title {
         @media @bp-global-small {
             margin-top: 20px;
@@ -472,6 +482,8 @@
     width: 100%;
     background-color: @color__footer--background;
     padding: 5px 3%;
+    z-index: 2;
+    position: relative;
 
     .social-item {
         margin-right: 0;
@@ -509,7 +521,7 @@
         margin: 10px 10px 10px 0;
     }
     @media @tablet {
-        margin: 0 auto;
+        margin: 0;
     }
 }
 
@@ -520,7 +532,7 @@
         margin: 10px 0 10px 10px;
     }
     @media @tablet {
-        margin: 0 auto;
+        margin: 0;
     }
 }
 
