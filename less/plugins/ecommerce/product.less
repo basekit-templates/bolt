@@ -57,7 +57,7 @@
 
         @media @bp-global-small {
             margin-right: 0;
-            margin-top: -60px;
+            margin-top: -40px;
         }
     }
 
@@ -221,7 +221,7 @@
     
     
     .product-image {
-        background-color: #fff;
+        background-color: @color__body--background;
     
         body.product-one-image & {
             @media @bp-global-large {
@@ -242,7 +242,7 @@
         width: 100%;
         background-size: contain;
         background-position: center;
-        background-color: #fff;
+        background-color: @color__body--background;
         box-shadow: inset -70px 0px 100px #000;
     
         @media @bp-global-large {
@@ -256,12 +256,10 @@
         @media @bp-global-small {
             padding: 10px;
             height: 300px;
-            background-position: left;
             box-shadow: inset 2px -78px 130px -25px #000;
         }
         @media @mobile {
             padding: 10px;
-            height: 200px;
         }
     }
     
