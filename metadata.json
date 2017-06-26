@@ -87,9 +87,9 @@
         },
         "font8": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "44px",
+            "font-size": "260px",
             "font-weight": "400",
-            "line-height": "54px",
+            "line-height": "360px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },

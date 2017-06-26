@@ -170,18 +170,24 @@
     background-repeat: repeat-x;
     background-position: 0 90%;
     text-transform: uppercase;
+    word-break: break-word;
     @media @bp-1300px {
-        font-size: 180px;
-        line-height: 150px;
+        font-size: bkscale(@font-swatch8-font-size,0.7);
+        line-height: bkscale(@font-swatch8-line-height,0.4);
+    }
+    @media @tablet {
+        font-size: bkscale(@font-swatch8-font-size,0.6);
+        line-height: bkscale(@font-swatch8-line-height,0.35);
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch1-font-size,0.8);
-        line-height: bkscale(@font-swatch1-line-height,0.8);
+        font-size: bkscale(@font-swatch8-font-size,0.3);
+        line-height: bkscale(@font-swatch8-line-height,0.2);
         background-size: 0, 20px 4px;
         background-position: 0 80%;
         left: 0;
         top: 0;
         position: relative;
+        letter-spacing: 0;
     }
 }
 
