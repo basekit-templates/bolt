@@ -67,7 +67,7 @@
         "font6": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "18px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "26px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch6",
@@ -167,7 +167,7 @@
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "18px",
-            "font__navigation--font-weight": "300",
+            "font__navigation--font-weight": "400",
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "2px",
             "color__navigation--text": "#fff",
@@ -200,7 +200,6 @@
             "color__slideshow-description--text" : "#fff"
         },
         "feature": {
-            "color__feature--background": "@color-swatch3",
             "color__feature-content--background": "@color-swatch3",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "200px",

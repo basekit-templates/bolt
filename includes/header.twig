@@ -1,25 +1,52 @@
 <!-- Header -->
 <header class="template-header">
+
 	<div class="container">
+
 		<div class="flex-item">
+
 			<div class="widget-profile-header">
+
 				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'companyname', {
                     "business": "profile"
                 })|raw}}
+
 			</div>
+
 		</div>
+
         <div class="flex-item">
 
                 <nav class="nav">
+
                     {{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+
                 </nav>
 
                 <div class="nav-toggle">
+
                     <div class="icon"></div>
+
                 </div>
 
-            </div>
+        </div>
+
+        <div class="flex-item three">
+
+            {{widget('socialicons', 'socialnetworks', {
+              'googleplus': 'https://plus.google.com/101946323226233111530',
+              'linkedin':'http://www.linkedin.com/company/mycompanyname',
+              'facebook': 'https://www.facebook.com/mycompanyname',
+              'twitter': 'https://twitter.com/mycompanyname',
+              'youtube': 'https://www.youtube.com/user/mycompanyname',
+              'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm',
+              'pinterest': 'https://www.pinterest.com/mycompanyname',
+              'instagram': 'https://www.instagram.com/mycompanyname'
+            })|raw}}       
+
+        </div>
+
 	</div>
 </header>
 

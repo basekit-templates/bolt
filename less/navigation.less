@@ -60,7 +60,7 @@
 
 
 .navigation-item .item-name {
-    padding: 8px 20px;
+    padding: 8px 15px;
 
     &:hover {
         color: @color__navigation--text;
@@ -78,6 +78,14 @@
 
 
 // Selected Class
+.extendednavigation__navigation-list {
+    border-right: 2px solid @color__feature-headline--text;
+    padding-right: 20px;
+    @media @bp-global-small {
+        border-right: 0;
+    }
+}
+
 .extendednavigation li.selected > a  {
     color: @color__navigation--text;
     background-color: @color__navigation-item--background--selected;

@@ -208,6 +208,10 @@
     background: transparent;
     position: absolute;
     top: 0;
+    right: 10px;
+    @media @bp-global-small {
+        right: 0;
+    }
 }
 
 .template-header {
@@ -215,14 +219,11 @@
     position: relative;
     z-index: 12;
     max-width: 100%;
-    padding: 20px 3%;
+    padding: 20px 5% 20px 3%;
     width: 100%;
 
-    @media @bp-global-below-fullwidth {
-        width: 100%;
-    }
-    @media @bp-1300px { 
-        padding: 20px 40px;
+    @media @bp-global-medium {
+        padding: 20px 6% 20px 3%;
     }
     @media @bp-global-small {
         border: 0;
@@ -257,7 +258,6 @@
         @media @bp-global-small {
             background-color: transparent;
             border: 0;
-            display: inline-block;
 
             &:first-child,
             &:last-child {
