@@ -118,6 +118,10 @@
             padding: 20px;
         }
 
+        @media all and (max-width: 1200px) and (min-width: 769px) {
+            padding: 20px 10% 20px 3%;
+        }
+
         @media @mobile {
             padding: 20px 10px;
         }
@@ -126,6 +130,10 @@
 
             @media @bp-global-medium {
                 max-width: 6%;
+            }
+
+            @media screen and (min-device-width: 769px) and (max-device-width: 1200px) {
+                max-width: 8%;
             }
 
         }
@@ -234,10 +242,16 @@
     @media @bp-global-medium {
         padding: 20px 6% 20px 3%;
     }
+
     @media @bp-global-small {
         border: 0;
         padding: 20px 4%;
     }
+
+    @media all and (max-width: 1200px) and (min-width: 769px) {
+        padding: 20px 10% 20px 3%;
+    }
+
     @media @mobile {
         order: 1;
         padding: 10px 2%;
